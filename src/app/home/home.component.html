@@ -1,0 +1,134 @@
+<!-- Main navigation -->
+<header>	
+	<!-- Full Page Intro -->
+	<div class="view" style="background-image: url('assets/images/background-header.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+		<!-- Mask & flexbox options-->
+		<div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+			<!-- Content -->
+			<div class="container">
+				<!--Grid row-->
+				<div class="row">
+					<!--Grid column-->
+					<div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+						<h1 class="h1-responsive font-weight-bold mt-sm-5">Virtual Trade Exhibitions</h1>
+						<hr class="hr-light">
+						<h6 class="mb-4">Demo username: info@virtualtradeexhibitions.com Password: PASSWORD
+						</h6>
+						<h6 class="mb-4">Demo admin: admin@virtualtradeexhibitions.com Password: PASSWORD
+						</h6>
+						<a href="http://virtualtradeexhibitions.com/exhibitions" mdbBtn color="white" mdbWavesEffect >Try Platform</a>
+						<a mdbBtn color="white" outline="true" 
+							mdbPopover="{{learnMore}}"
+							triggers="focus"
+							placement="right" mdbWavesEffect>Learn more</a>
+					</div>
+					<!--Grid column-->
+					<!--Grid column-->
+					<div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInDown" data-wow-delay="0.5s">
+						<img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">
+					</div>
+					<!--Grid column-->
+				</div>
+				<!--Grid row-->
+			</div>
+			<!-- Content -->
+		</div>
+		<!-- Mask & flexbox options-->
+	</div>
+	<!-- Full Page Intro -->
+</header>
+<!-- Main navigation -->
+
+<!--Main Layout-->
+<main>
+	<section class="text-center pb-3 trade-section" >
+		<!--Section heading-->
+		<h2 class="font-weight-bold h1 py-5">
+			<p style="height: 50px;"></p>
+			<strong>CONTINUE YOUR TRADE EXHIBITION ONLINE</strong>
+		</h2>
+		
+		<!-- Craousel part -->
+		<mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+		[animation]="'slide'">
+			<mdb-carousel-item *ngFor="let item of slides; let i = index">
+				<div class="col-md-3" [ngClass]="{'d-none d-md-block': cardIndex !== 0}" *ngFor="let card of item; let cardIndex = index">
+					<mdb-card class="my-1">
+						<mdb-card-img class="card-image" [src]="card.img" alt="Card image cap"></mdb-card-img>
+						<mdb-card-body>
+							<mdb-card-title>
+								<h4 class="card-title">{{card.title}}</h4>
+							</mdb-card-title>
+						</mdb-card-body>
+					</mdb-card>
+				</div>
+			</mdb-carousel-item>
+		</mdb-carousel>
+
+		<p style="height: 100px;"></p>
+		
+	</section>
+
+	<section class="text-center price-section">
+		
+			<!--Section heading-->
+			<h2 class="h1 py-5 font-weight-bold">PRICE</h2>
+			<!--Section description-->
+			<p class="px-5 mb-5 pb-3 lead black-text font-weight-bold">350 EUROS FOR THE CODE OR FOR US TO UPLOAD TO YOUR EXHIBITION OR CONFERENCE SITE
+			</p>
+
+			<!--Grid row-->
+			<div class="row">
+
+				<!--Grid column-->
+				<div class="col-md-12">
+					<button (click)="purchaseNow()" class="rounded mb-0" mdbBtn type="button" color="primary" mdbWavesEffect>PURCHASE NOW</button>
+				</div>
+				<!--Grid column-->
+
+			</div>
+			<!--Grid row-->
+
+	</section>
+
+	<section class="text-center contact-section">
+
+		<!--Section heading-->
+		<h2 class="h1 py-5 font-weight-bold">CONTACT US ON</h2>
+
+		<!--Grid row-->
+		<div class="row py-3">
+			<mdb-icon class="col-xl-1 col-md-1 col-sm-6 blue-text" fas icon="envelope" size="2x"></mdb-icon>
+			<h5 class="font-weight-bold col-md-1 col-xl-1">info@virtualtradeexhibitions.com</h5>
+		</div>
+		
+		<div class="row py-3">
+			<mdb-icon fas icon="phone" size="2x" class="col-xl-1 col-md-1 col-sm-6 blue-text"></mdb-icon>
+			<h5 class="font-weight-bold col-xl-3 col-md-3 text-md-left text-xl-left">0034 674526884</h5>
+		</div>
+
+		<div class="row py-3">
+			<h5 class="font-weight-bold pr-3 col-xl-7 col-md-7 col-sm-7" style="line-height: 3;">Register on our platform with sign up code 12345 to try it</h5>
+		</div>
+
+		<div class="row py-3">
+			<p class="col-xl-1 col-md-1 col-sm-2"></p>
+			<a href="http://virtualtradeexhibitions.com/exhibitions" class="rounded-pill ml-md-1 ml-xl-1 col-xl-2 col-md-2 col-sm-2" mdbBtn type="button" color="secondary" mdbWavesEffect>Register</a>
+		</div>
+
+	</section>
+
+</main>
+<!--Main Layout-->
+
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="http://virtualtradeexhibitions.com/"> Virtual trade exhibitions ltd</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

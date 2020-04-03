@@ -1,0 +1,6 @@
+node_modules
+dist
+.idea
+License.pdf
+package-lock.json
+angular.json
